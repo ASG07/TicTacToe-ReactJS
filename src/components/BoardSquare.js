@@ -2,7 +2,7 @@ import React from 'react'
 
 
 
-const BoardSquare = ({squares, changeBoxState, changeTurn, turn, square, checkWinner}) => {
+const BoardSquare = ({squares, changeBoxState, changeTurn, turn, square, checkWinner, stop}) => {
 
     
 
@@ -10,7 +10,7 @@ const BoardSquare = ({squares, changeBoxState, changeTurn, turn, square, checkWi
         <div className='square' 
             key={1} 
             onClick={(e) => {
-                if (e.currentTarget.innerHTML === ''){
+                if (e.currentTarget.innerHTML === '' && !stop){
                     changeBoxState(square.id);
                     
                     changeTurn()

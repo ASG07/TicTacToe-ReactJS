@@ -26,3 +26,85 @@
   max-width: 8rem;
   cursor: pointer;
 }
+
+@keyframes grow-left {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+/* ///////////////////////// Winning Line Styling ////////////////////////// */
+.h_line{
+  position: relative;
+  bottom: 12.9rem;
+  margin-left: 10%;
+  margin: auto;
+  background-color: black;
+  width: 23rem;
+  height: 1.3rem;
+  border-radius: 100% 0px;
+
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: grow-left cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.1s forwards;
+  animation-delay: 0.4s;
+}
+
+.h_bottom{
+  bottom: 5rem;
+}
+
+.h_top{
+  bottom: 20.8rem;
+}
+
+.v_line{
+  position: absolute;
+  bottom: 25.9rem;
+  
+  margin: auto;
+  margin-left: 11.6rem;
+  background-color: black;
+  height: 23rem;
+  width: 1.3rem;
+  border-radius: 100% 0px;
+  
+
+  transform: scaleX(0);
+  transform-origin: 50% 50%;
+  animation: grow-left cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.1s forwards;
+  animation-delay: 0.4s;
+}
+
+.v_left{
+  margin-left: 3.5rem;
+}
+
+.v_right{
+  margin-left: 20rem;
+}
+
+.slash{
+  position: absolute;
+  bottom: 23.8rem;
+  margin: auto;
+  margin-left: 11.6rem;
+  background-color: black;
+  height: 27rem;
+  width: 1.3rem;
+  border-radius: 100% 0px;
+
+  transform-origin: 50% 50%;
+
+}
+
+.backward_slash{
+  transform: rotate(-45deg)!important;
+}
+
+.forward_slash{
+  transform: rotate(45deg)!important;
+}
+
